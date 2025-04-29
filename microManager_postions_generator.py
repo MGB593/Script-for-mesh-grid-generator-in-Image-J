@@ -21,7 +21,7 @@ constant_stage_port = 31
 
 shifted_pos = np.zeros(3)
 shifted_pos[0] = start_position[0] - x_range / 2
-shifted_pos[1] = start_position[1] #-  y_range / 2
+shifted_pos[1] = start_position[1] -  y_range / 2
 shifted_pos[2] = start_position[2]  
 
 
@@ -36,7 +36,7 @@ def generate_positions(start_pos, x_range, y_range, z_range):
         z = z_start - z_step * step_size_z
         for y_step in range(int(y_range / step_size_y)+1):
 #            y = y_start + y_step * step_size_y     # stage moving up 
-            y = y_start - y_step * step_size_y     # stage moving down    
+            y = y_start + y_step * step_size_y     # stage moving down    
             for x_step in range(int(x_range / step_size_x)+1):
                 x = x_start + x_step * step_size_x
 #                x = x_start - x_step * step_size_x
