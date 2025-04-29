@@ -32,12 +32,12 @@ def generate_positions(start_pos, x_range, y_range, z_range):
 
     x_start, y_start, z_start = shifted_pos
 
-    for z_step in range(int(z_range / step_size_z)):
+    for z_step in range(int(z_range / step_size_z)+1):
         z = z_start - z_step * step_size_z
-        for y_step in range(int(y_range / step_size_y)):
+        for y_step in range(int(y_range / step_size_y)+1):
 #            y = y_start + y_step * step_size_y     # stage moving up 
             y = y_start - y_step * step_size_y     # stage moving down    
-            for x_step in range(int(x_range / step_size_x)):
+            for x_step in range(int(x_range / step_size_x)+1):
                 x = x_start + x_step * step_size_x
 #                x = x_start - x_step * step_size_x
                 
